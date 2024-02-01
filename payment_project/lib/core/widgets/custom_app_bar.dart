@@ -1,6 +1,4 @@
-/* import 'package:checkout_payment_ui/core/utils/styles.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+/* import 'package:flutter/material.dart';
 
 AppBar buildAppBar({final String? title}) {
   return AppBar(
@@ -18,4 +16,4 @@ AppBar buildAppBar({final String? title}) {
       style: Styles.style25,
     ),
   );
-} */
+}  */
