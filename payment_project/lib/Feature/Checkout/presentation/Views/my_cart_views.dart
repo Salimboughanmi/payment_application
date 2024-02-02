@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:payment_project/core/utils/style.dart';
 
 class MyCartViews extends StatelessWidget {
   const MyCartViews({super.key});
@@ -7,17 +8,16 @@ class MyCartViews extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 116, 139, 179),
-        title: Text(
-          'My Cart',
-          textAlign: TextAlign.center,
-          style: TextStyle(
-              color: Colors.black,
-              fontSize: 28,
-              fontFamily: 'Inter',
-              fontWeight: FontWeight.w500,
-              height: 0),
+        leading: Icon(
+          Icons.arrow_back,
+          color: Colors.black,
+          weight: 25,
         ),
+        elevation: 0,
+        centerTitle: true,
+        backgroundColor: Colors.transparent,
+        title:
+            Text('My Cart', textAlign: TextAlign.center, style: Styles.style25),
       ),
     );
   }
