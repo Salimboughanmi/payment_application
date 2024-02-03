@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:payment_project/core/utils/style.dart';
 import 'package:payment_project/core/widgets/cart_info-item.dart';
+import 'package:payment_project/core/widgets/custom_button.dart';
+import 'package:payment_project/core/widgets/total_price_widget.dart';
 
 class MyCartViewBody extends StatelessWidget {
   const MyCartViewBody({super.key});
@@ -40,9 +42,14 @@ class MyCartViewBody extends StatelessWidget {
           ),
           Divider(
             color: Color.fromARGB(255, 69, 164, 179),
-            height: 30,
+            height: 15,
             thickness: 2,
-          )
+          ),
+          TotalPrice(
+            title: 'Total',
+            value: r'$50',
+          ),
+          CustomButton(text: 'Complete Payment')
         ],
       ),
     );
