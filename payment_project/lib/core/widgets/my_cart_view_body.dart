@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:payment_project/Feature/Checkout/presentation/Views/payment_details.dart';
 import 'package:payment_project/core/utils/style.dart';
 import 'package:payment_project/core/widgets/cart_info-item.dart';
 import 'package:payment_project/core/widgets/custom_button.dart';
@@ -16,11 +18,11 @@ class MyCartViewBody extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center, */
         children: [
           SizedBox(
-            height: 15,
+            height: 5,
           ),
-          Image.asset('assets/images/basket_image.png'),
+          Expanded(child: Image.asset('assets/images/basket_image.png')),
           SizedBox(
-            height: 15,
+            height: 5,
           ),
           OrderInfoItem(
             title: "Order sobutal",
@@ -49,7 +51,17 @@ class MyCartViewBody extends StatelessWidget {
             title: 'Total',
             value: r'$50',
           ),
-          CustomButton(text: 'Complete Payment')
+          CustomButton(
+            text: 'Complete Payment',
+            onTap: () => {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                return PaymentDetails();
+              }))
+            },
+          ),
+          SizedBox(
+            height: 10,
+          )
         ],
       ),
     );

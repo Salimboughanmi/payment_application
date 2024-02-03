@@ -1,10 +1,13 @@
-/* import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
+import 'package:payment_project/core/utils/style.dart';
 
 AppBar buildAppBar({final String? title}) {
   return AppBar(
     leading: Center(
-      child: SvgPicture.asset(
-        'assets/images/arrow.svg',
+      child: Icon(
+        Icons.arrow_back,
+        color: Colors.black,
+        weight: 25,
       ),
     ),
     elevation: 0,
@@ -16,4 +19,4 @@ AppBar buildAppBar({final String? title}) {
       style: Styles.style25,
     ),
   );
-}  */
+}
