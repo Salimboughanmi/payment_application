@@ -31,34 +31,12 @@ class PaymentMethodeItem extends StatelessWidget {
             color: const Color.fromARGB(255, 255, 255, 255)),
         child: Center(
           child: SvgPicture.asset(
-            "assets/images/card.svg",
-            height: 25,
+            image,
+            height: 30,
+            fit: BoxFit.scaleDown,
           ),
         ),
       ),
-    );
-  }
-}
-
-class PaymentMethodeListView extends StatelessWidget {
-  const PaymentMethodeListView({
-    super.key,
-  });
-  final List<String> paymentMethodeItems = const [
-    'assets/images/card.svg',
-    'assets/images/master_card.svg',
-    'assets/images/paypal.svg'
-  ];
-  @override
-  Widget build(BuildContext context) {
-    return ListView.builder(
-      scrollDirection: Axis.horizontal,
-      itemBuilder: (context, index) {
-        return PaymentMethodeItem(
-          isactive: false,
-          image: paymentMethodeItems[index],
-        );
-      },
     );
   }
 }
