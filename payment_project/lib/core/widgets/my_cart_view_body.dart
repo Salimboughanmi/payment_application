@@ -32,14 +32,14 @@ class MyCartViewBody extends StatelessWidget {
             height: 3,
           ),
           OrderInfoItem(
-            title: "Order sobutal",
+            title: "Discount",
             value: r"$24.09",
           ),
           SizedBox(
             height: 3,
           ),
           OrderInfoItem(
-            title: "Order sobutal",
+            title: "Shipping",
             value: r"$24.09",
           ),
           Divider(
