@@ -20,7 +20,9 @@ class MyCartViewBody extends StatelessWidget {
           SizedBox(
             height: 5,
           ),
-          Expanded(child: Image.asset('assets/images/basket_image.png')),
+          Expanded(
+            child: Image.asset('assets/images/basket_image.png'),
+          ),
           SizedBox(
             height: 5,
           ),
