@@ -25,7 +25,7 @@ class CustomCreditCart extends StatefulWidget {
 class _CustomCreditCartState extends State<CustomCreditCart> {
   String cardNumber = '', expiryDate = '', cardHolderName = '', cvvCode = '';
 
-  bool showBackView = true;
+  bool showBackView = false;
   final GlobalKey<FormState> formKey = GlobalKey();
   @override
   Widget build(BuildContext context) {
@@ -37,7 +37,7 @@ class _CustomCreditCartState extends State<CustomCreditCart> {
           cardHolderName: cardHolderName,
           cvvCode: cvvCode,
           showBackView: /* isCvvFocused */
-              true, //true when you want to show cvv(back) view
+              showBackView, //true when you want to show cvv(back) view
           onCreditCardWidgetChange:
               (value) {}, // Callback for anytime credit card brand is changed
         ),
@@ -51,23 +51,33 @@ class _CustomCreditCartState extends State<CustomCreditCart> {
           //cvvCodeKey: cvvCodeKey,
           //expiryDateKey: expiryDateKey,
           //cardHolderKey: cardHolderKey,
-          onCreditCardModelChange: (CreditCardModel data) {}, // Required
-          obscureCvv: true,
-          obscureNumber: true,
-          isHolderNameVisible: true,
-          isCardNumberVisible: true,
-          isExpiryDateVisible: true,
-          enableCvv: true,
+          onCreditCardModelChange: (CreditCardModel) {
+            cardHolderName = CreditCardModel.cardHolderName;
+            cardNumber = CreditCardModel.cardNumber;
+            expiryDate = CreditCardModel.expiryDate;
+            cvvCode = CreditCardModel.cvvCode;
+            showBackView = CreditCardModel.isCvvFocused;
+
+            setState(() {});
+          }, // Required
+          /*    obscureCvv: false,
+          obscureNumber: false,
+          isHolderNameVisible: false,
+          isCardNumberVisible: false,
+          isExpiryDateVisible: false,
+          enableCvv: true, */
+
           cvvValidationMessage: 'Please input a valid CVV',
           dateValidationMessage: 'Please input a valid date',
           numberValidationMessage: 'Please input a valid number',
-          cardNumberValidator: (String? cardNumber) {},
+
+          /*  cardNumberValidator: (String? cardNumber) {},
           expiryDateValidator: (String? expiryDate) {},
           cvvValidator: (String? cvv) {},
           cardHolderValidator: (String? cardHolderName) {},
           onFormComplete: () {
             // callback to execute at the end of filling card data
-          },
+          }, */
           autovalidateMode: AutovalidateMode.always,
           disableCardNumberAutoFillHints: false,
           inputConfiguration: const InputConfiguration(
