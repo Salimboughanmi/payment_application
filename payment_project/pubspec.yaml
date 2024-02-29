@@ -37,12 +37,16 @@ dependencies:
   cupertino_icons: ^1.0.6
   flutter_svg: ^2.0.9
   flutter_credit_card: ^4.0.1
+  flutter_launcher_icons: ^0.13.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   #font_awesome_flutter: ^10.5.0
-
+flutter_icons:
+  image_path: "assets/payment.jpg" 
+  android: true
+  ios: true
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
