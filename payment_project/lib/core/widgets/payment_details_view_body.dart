@@ -17,8 +17,15 @@ class PaymentDetailsViewBody extends StatelessWidget {
           child: CustomCreditCart(),
         ),
         SliverFillRemaining(
-          child: CustomButton(
-            text: "Complete payment",
+          hasScrollBody: false,
+          child: Align(
+            alignment: Alignment.bottomCenter,
+            child: Padding(
+              padding: const EdgeInsets.only(bottom: 14, left: 14, right: 14),
+              child: CustomButton(
+                text: "Complete payment",
+              ),
+            ),
           ),
         ),
       ],
