@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:payment_project/Feature/Checkout/presentation/Views/payment_details.dart';
-import 'package:payment_project/core/utils/style.dart';
 import 'package:payment_project/core/widgets/cart_info-item.dart';
 import 'package:payment_project/core/widgets/custom_button.dart';
 import 'package:payment_project/core/widgets/total_price_widget.dart';
