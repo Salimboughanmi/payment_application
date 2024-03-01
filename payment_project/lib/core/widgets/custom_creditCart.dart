@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_credit_card/flutter_credit_card.dart';
-import 'package:payment_project/core/widgets/custom_button.dart';
 
 class CustomCreditCart extends StatefulWidget {
-  const CustomCreditCart({super.key});
+  const CustomCreditCart({super.key, required this.formKey});
+  final GlobalKey<FormState> formKey;
 
   @override
   State<CustomCreditCart> createState() => _CustomCreditCartState();
@@ -13,7 +14,7 @@ class _CustomCreditCartState extends State<CustomCreditCart> {
   String cardNumber = '', expiryDate = '', cardHolderName = '', cvvCode = '';
 
   bool showBackView = false;
-  final GlobalKey<FormState> formKey = GlobalKey();
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -30,7 +31,7 @@ class _CustomCreditCartState extends State<CustomCreditCart> {
               (value) {}, // Callback for anytime credit card brand is changed
         ),
         CreditCardForm(
-          formKey: formKey, // Required
+          formKey: widget.formKey, // Required
           cardNumber: cardNumber, // Required
           expiryDate: expiryDate, // Required
           cardHolderName: cardHolderName, // Required
