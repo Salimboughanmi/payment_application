@@ -6,6 +6,8 @@ class ThanakYouView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ThankYouViewBody();
+    return Scaffold(
+      body: ThankYouViewBody(),
+    );
   }
 }
