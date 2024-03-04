@@ -64,6 +64,7 @@ class thankYouCard extends StatelessWidget {
               height: 10,
             ),
             CardInfoWidget(),
+            const Spacer(),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -91,7 +92,10 @@ class thankYouCard extends StatelessWidget {
                   ),
                 )
               ],
-            )
+            ),
+            SizedBox(
+                height:
+                    ((MediaQuery.sizeOf(context).height * .2 + 20) / 2) - 29)
           ],
         ),
       ),
